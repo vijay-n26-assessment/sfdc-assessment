@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="ProductInformationController" >
+	<aura:attribute name="recordId" type="Id" access="global" />
+    <aura:attribute name="productInformation" type="List" />
+    <aura:attribute name="infoFound" type="Boolean" default="false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:card>
+        <aura:set attribute="title">
+            <lightning:icon iconName="utility:info" size="small"/>
+            Customer's Product Information
+        </aura:set>
+        
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <aura:if isTrue="{!v.infoFound}">
+                <aura:iteration items="{!v.productInformation}" var="info">
+                    <div class="slds-p-around_x-small">{!info.key}:&nbsp;<b>{!info.value}</b></div>
+                </aura:iteration>
+                
+                <aura:set attribute="else">
+                    <div class="slds-p-around_x-small">Product information not found.</div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </lightning:card>
+</aura:component>

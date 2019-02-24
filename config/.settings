@@ -1,0 +1,20 @@
+{
+    "projectName": "N26",
+    "username": "vijay@n26assessment.com",
+    "id": "6d3c8450-3881-11e9-830f-8bcb352e910c",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://n26-assessment-dev-ed.my.salesforce.com",
+    "workspace": "D:\\MavensMate",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "CustomLabels",
+        "CustomObject",
+        "StaticResource"
+    ]
+}
